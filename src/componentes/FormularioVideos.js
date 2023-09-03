@@ -216,7 +216,7 @@ function FormularioVideos() {
             <Grid rowSpacing={5} container sx={{
             }}>
               <Grid item xs={12}  >
-                <Typography align='center' variant='h3' color="#ffffff"  > Nuevo video</Typography>
+                <Typography align='center' variant='h3' color="#e9e3b0"  > Agregar video</Typography>
 
               </Grid>
 
@@ -231,7 +231,7 @@ function FormularioVideos() {
                     <div>
                       <TextField
                         {...field}
-                        sx={{ backgroundColor: '#53585D', color: 'white' }}
+                        sx={{ backgroundColor: '#eae9e8', color: '#101010' }}
                         variant="filled"
                         error={!!errors.titulo}
                         // helperText={fieldState.error?.message}
@@ -263,7 +263,7 @@ function FormularioVideos() {
                     <div>
                       <TextField
                         {...field}
-                        sx={{ backgroundColor: '#53585D', color: 'white' }}
+                        sx={{ backgroundColor: '#eae9e8', color: '#101010' }}
                         variant="filled"
                         error={!!errors.linkVideo}
                         fullWidth
@@ -317,7 +317,7 @@ function FormularioVideos() {
                           error={!!errors.Categoria}
 
                           fullWidth
-                          sx={{ backgroundColor: '#53585D', color: 'white' }}
+                          sx={{ backgroundColor: '#eae9e8', color: '#101010' }}
                           labelId="demo-simple-select-helper-label"
                           id="demo-simple-select-helper"
                           label="Escojer una categoria"
@@ -350,7 +350,7 @@ function FormularioVideos() {
                       <TextField
                         {...field}
                         error={!!errors.descripcion}
-                        sx={{ backgroundColor: '#53585D', color: 'white' }}
+                        sx={{ backgroundColor: '#eae9e8', color: '#101010' }}
                         variant="filled"
                         fullWidth
                         label="Descripción"
@@ -378,7 +378,7 @@ function FormularioVideos() {
                     <div>
                       <TextField
                         {...field}
-                        sx={{ backgroundColor: '#53585D', color: 'white' }}
+                        sx={{ backgroundColor: '#eae9e8', color: '#101010' }}
                         variant="filled"
 
                         error={!!errors.codigoSeguridad}
