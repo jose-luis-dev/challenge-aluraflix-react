@@ -29,13 +29,13 @@ function App() {
   const [reducerValue, forceUpdate] = useReducer(x => x + 1, 0);
 
   useEffect(() => {
-    axios.get('https://my-json-server.typicode.com/jose-luis-dev/challenger-react-alura/categorias')
+    axios.get('https://my-json-server.typicode.com/jose-luis-dev/challenge-aluraflix-react/categorias')
       .then(response => setCategorias(response.data))
       .catch(error => console.error(error));
   }, [reducerValue]);
 
   useEffect(() => {
-    axios.get('https://my-json-server.typicode.com/jose-luis-dev/challenger-react-alura/videos')
+    axios.get('https://my-json-server.typicode.com/jose-luis-dev/challenge-aluraflix-react/videos')
       .then(response => setVideos(response.data))
       .catch(error => console.error(error));
   }, [reducerValue]);

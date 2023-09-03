@@ -135,7 +135,7 @@ function FormularioVideos() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('https://my-json-server.typicode.com/jose-luis-dev/challenger-react-alura/categorias');
+        const response = await fetch('https://my-json-server.typicode.com/jose-luis-dev/challenge-aluraflix-react/categorias');
         const data = await response.json();
         setOptions(data);
       } catch (error) {
@@ -170,7 +170,7 @@ function FormularioVideos() {
       }
       
       // Send the form data to the server
-      const response = await axios.post('https://my-json-server.typicode.com/jose-luis-dev/challenger-react-alura/categorias', data);
+      const response = await axios.post('https://my-json-server.typicode.com/jose-luis-dev/challenge-aluraflix-react/categorias', data);
       console.log(response.data);
       console.log(response.status);
       enqueueSnackbar('Video agregado correctamente', {

@@ -30,7 +30,7 @@ const Logo = styled.img`
 function Footer() {
   return (
     <FooterContainer>
-    <Logo src={logo} alt="Aluraflix Logo" /> 
+    <Logo src={logo} alt="Resident Logo" /> 
 
     </FooterContainer>
   )
