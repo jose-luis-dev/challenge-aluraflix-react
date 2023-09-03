@@ -1,0 +1,107 @@
+{
+  "videos": [
+    {
+      "id": 1,
+      "titulo": "cuando usar let,var y const",
+      "linkVideo": "https://www.youtube.com/watch?v=PztCEdIJITY",
+      "linkImagenVideo": "/Images/front1.png",
+      "Categoria": "Resident Evil Games",
+      "descripcion": "In the modern design world, Lorem Ipsum is the industry standard when placing dummy text onto an unfinished page, whether it's a newspaper, magazine, or advertisement. The Latin text was first used in the 16th century, when a printer scrambled a row of type (known as a ",
+      "codigoSeguridad": ""
+    },
+    {
+      "id": 2,
+      "titulo": "que es javascript",
+      "linkVideo": "https://www.youtube.com/watch?v=GJfOSoaXk4s&t=433s",
+      "linkImagenVideo": "/Images/front2.png",
+      "Categoria": "Resident Evil Games",
+      "decripcion": "",
+      "codigoSeguridad": ""
+    },
+    {
+      "titulo": "Que son las softs skills",
+      "linkVideo": "https://www.youtube.com/watch?v=vhwspfvI52k&t=189s",
+      "Categoria": "Cultura Pop de Resident Evil",
+      "descripcion": "¿Qué son las Softskills y por qué es tan importante desarrollarlas para posicionarse en el mercado laboral? En este video de Alura Tips, Pri Stuani nos habla de las habilidades más buscadas por las empresas en sus profesionales y cómo las Soft Skills te ayudan en el día a día.",
+      "codigoSeguridad": "12345678",
+      "linkImagenVideo": "https://res.cloudinary.com/dkj7iqhfy/image/upload/v1685480826/m4ja6ibudvhstw50uglm.jpg",
+      "id": 8
+    },
+    {
+      "titulo": "Spring Framework. ¿Qué es ? ",
+      "linkVideo": "https://www.youtube.com/watch?v=t-iqt1b2qqk",
+      "Categoria": "Survival Horror",
+      "descripcion": "¿Busca un framework  para utilizar en sus proyectos? ¿Conoce Spring Framework? Spring es el framework más usado de Java. Nos ofrece herramientas que nos permiten crear proyectos más avanzados, con mejores prácticas y en menor tiempo. También posee una gran comunidad, lo que nos brinda muchísima documentación y ayuda.\n¿Quieres saber más?\n",
+      "codigoSeguridad": "12345678",
+      "linkImagenVideo": "https://res.cloudinary.com/dkj7iqhfy/image/upload/v1685481249/jqbckgtqqpcyqwjwg6au.jpg",
+      "id": 9
+    },
+    {
+      "titulo": "Box Model y Box sizing",
+      "linkVideo": "https://www.youtube.com/watch?v=ts9qfCKamKg&t=5s",
+      "Categoria": "Resident Evil Games",
+      "descripcion": "Box Model y Box sizing",
+      "codigoSeguridad": "12345678",
+      "linkImagenVideo": "https://res.cloudinary.com/dkj7iqhfy/image/upload/v1685567216/yc9xhaj1airravb07kdh.jpg",
+      "id": 10
+    },
+    {
+      "titulo": "Empresas que aprenden ",
+      "linkVideo": "https://www.youtube.com/watch?v=mwNfWRsDDWE",
+      "Categoria": "Cultura Pop de Resident Evil",
+      "descripcion": "**El aprendizaje organizacional promueve tanto la adaptación al cambio como el crecimiento de la empresa**. Pero, ¿tienes alguna idea de cómo hacerse esto? En este Alura+, Priscila Stuani habla sobre el papel de la organización en el proceso de aprendizaje de sus profesionales.\n\nLas organizaciones tienen responsabilidades en el proceso de aprendizaje de sus colaboradores. Una de las formas de actuar en este sentido es potenciar algunas habilidades, como el pensamiento sistémico, el dominio personal, trabajar modelos mentales, construir una visión compartida, aprender en equipo y reconocer los patrones de interacción que dificultan este aprendizaje, además de componentes de tecnologías estimulantes.",
+      "codigoSeguridad": "12345678",
+      "linkImagenVideo": "https://res.cloudinary.com/dkj7iqhfy/image/upload/v1685579843/mxcvksyyqrdo5jdwrmxt.png",
+      "id": 11
+    },
+    {
+      "titulo": "7 Soft Skills más deseadas por las empresas",
+      "linkVideo": "https://www.youtube.com/watch?v=YhR7Zp8NUzE",
+      "Categoria": "Cultura Pop de Resident Evil",
+      "descripcion": "Seguro que ya escuchaste hablar sobre las Soft Skills, pero ¿sabes cuáles son las 7 más buscadas por las empresas? Quédate en este video con nosotros que vamos a explicarte la importancia de estas habilidades y porque son tan requeridas en el mercado laboral.\n\n¿Quieres saber más?\n\nVe nuestros cursos de Innovación y Gestión:\nhttps://www.aluracursos.com/cursos-on...\n\nEncuentra variados artículos sobre tecnologia en nuestro blog: https://www.aluracursos.com/blog/\n\n¡Videos nuevos todos los miércoles! A las 6pm México * 7pm Colombia * 8pm Bolivia * 9pm Argentina/Chile",
+      "codigoSeguridad": "12345678",
+      "linkImagenVideo": "https://res.cloudinary.com/dkj7iqhfy/image/upload/v1685580828/hze70ejhyfzdw74k8tk8.jpg",
+      "id": 12
+    },
+    {
+      "titulo": "Aprendiendo a utilizar Figma",
+      "linkVideo": "https://www.youtube.com/watch?v=UuAX5azcvDQ",
+      "Categoria": "Resident Evil Games",
+      "descripcion": "\nEn este Alura+, Genesys, instructora de Alura Latam, nos responde esa pregunta y nos muestra esta conocida herramienta.\n\n¿Quieres saber más?\n\nEntra a nuestra plataforma, dónde encontrarás variados cursos de tecnología:\nhttps://www.aluracursos.com/\n\nEncuentra variados artículos sobre tecnologia en nuestro blog: https://www.aluracursos.com/blog/\n\n¡Videos nuevos todos los miércoles! A las 6pm México * 7pm Colombia * 8pm Bolivia * 9pm Argentina/Chile",
+      "codigoSeguridad": "12345678",
+      "linkImagenVideo": "https://res.cloudinary.com/dkj7iqhfy/image/upload/v1685820371/g05mariipqt8dttkzxkb.jpg",
+      "id": 15
+    },
+    {
+      "titulo": "Equipo front end",
+      "linkVideo": "https://www.youtube.com/watch?v=rpvrLaBQwgg",
+      "Categoria": "Resident Evil Games",
+      "descripcion": "¿Estás empezando tus estudios de Programación? ¿Te interesa todo lo que es la creación de Páginas Web Desarrollo de Softwares? ¿O estás pensando en cambiar de carrera y entrar a la maravillosa area de tecnología?",
+      "codigoSeguridad": "12345678",
+      "linkImagenVideo": "https://res.cloudinary.com/dkj7iqhfy/image/upload/v1685821856/q58g3swdjnxv30u3jkux.png",
+      "id": 16
+    }
+  ],
+  "categorias": [
+    {
+      "id": 1,
+      "categoriaNombre": "Resident Evil Games",
+      "categoriaTexto": "Juegos principales de la serie",
+      "categoriaColor": "#E01E15"
+    },
+    {
+      "categoriaNombre": "Survival Horror",
+      "categoriaTexto": "Encuentros con enemigos",
+      "categoriaColor": "#EAD950",
+      "codigoSeguridad": "12345678",
+      "id": 2
+    },
+    {
+      "categoriaNombre": "Cultura Pop de Resident Evil",
+      "categoriaTexto": "Mercancía y coleccionables",
+      "categoriaColor": "#41C134",
+      "codigoSeguridad": "12345678",
+      "id": 3
+    }
+  ]
+}
