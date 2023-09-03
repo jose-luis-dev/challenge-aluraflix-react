@@ -170,7 +170,7 @@ const Banner = () => {
       <BannerImage>
         <BannerContent>
           <BannerTexContent>
-            <Titulo>Front End</Titulo>
+            <Titulo>Aluraflix</Titulo>
             <SubTitulo>
                Resident Evil Challenge
             </SubTitulo>

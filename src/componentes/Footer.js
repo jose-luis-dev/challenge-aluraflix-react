@@ -12,7 +12,7 @@ const FooterContainer = styled.div`
     align-items: top;
     justify-content:center;
     min-width:320px;
-    border-top: 2px solid #2A7AE4;
+    border-top: 2px solid #FFC300;
     padding-top:1rem; 
 `
 

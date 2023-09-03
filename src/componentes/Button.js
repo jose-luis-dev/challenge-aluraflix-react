@@ -12,7 +12,7 @@ font-family: 'Source Sans Pro', sans-serif;
 margin-right: ${props => props.marginR  || '0'};
 margin-left: ${props=>props.ml || '0'};
 border: 2px solid #df3616;
-border-radius: 3px;
+border-radius: 4px;
 display: block;
 
 ${props => css`
