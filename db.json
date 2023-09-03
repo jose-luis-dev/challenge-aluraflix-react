@@ -2,7 +2,7 @@
   "videos": [
     {
       "id": 1,
-      "titulo": "cuando usar let,var y const",
+      "titulo": "Resident Evil 4 remake",
       "linkVideo": "https://youtu.be/zBhi-SQBs7Q?si=KqzFOubuLOyiUgBC",
       "linkImagenVideo": "https://res.cloudinary.com/dvxcdxqpk/image/upload/v1693782516/wxyzm8kvqasbikkbvsmb.webp",
       "Categoria": "Resident Evil Games",
@@ -11,18 +11,18 @@
     },
     {
       "id": 2,
-      "titulo": "que es javascript",
-      "linkVideo": "https://www.youtube.com/watch?v=GJfOSoaXk4s&t=433s",
-      "linkImagenVideo": "/Images/front2.png",
+      "titulo": "Resident Evil 3 remake",
+      "linkVideo": "https://youtu.be/yqeu5htilkM?si=-1RWKcz6RiHIni2i",
+      "linkImagenVideo": "https://res.cloudinary.com/dvxcdxqpk/image/upload/v1693782517/fqoflwvsoegmqq8dsoih.webp",
       "Categoria": "Resident Evil Games",
-      "decripcion": "",
+      "decripcion": "Lorem",
       "codigoSeguridad": ""
     },
     {
       "titulo": "Que son las softs skills",
       "linkVideo": "https://www.youtube.com/watch?v=vhwspfvI52k&t=189s",
       "Categoria": "Cultura Pop de Resident Evil",
-      "descripcion": "¿Qué son las Softskills y por qué es tan importante desarrollarlas para posicionarse en el mercado laboral? En este video de Alura Tips, Pri Stuani nos habla de las habilidades más buscadas por las empresas en sus profesionales y cómo las Soft Skills te ayudan en el día a día.",
+      "descripcion": "In the modern design world, Lorem Ipsum is the industry standard when placing dummy text onto an unfinished page, whether it's a newspaper, magazine, or advertisement.",
       "codigoSeguridad": "12345678",
       "linkImagenVideo": "https://res.cloudinary.com/dkj7iqhfy/image/upload/v1685480826/m4ja6ibudvhstw50uglm.jpg",
       "id": 8
@@ -31,25 +31,25 @@
       "titulo": "Spring Framework. ¿Qué es ? ",
       "linkVideo": "https://www.youtube.com/watch?v=t-iqt1b2qqk",
       "Categoria": "Survival Horror",
-      "descripcion": "¿Busca un framework  para utilizar en sus proyectos? ¿Conoce Spring Framework? Spring es el framework más usado de Java. Nos ofrece herramientas que nos permiten crear proyectos más avanzados, con mejores prácticas y en menor tiempo. También posee una gran comunidad, lo que nos brinda muchísima documentación y ayuda.\n¿Quieres saber más?\n",
+      "descripcion": "In the modern design world, Lorem Ipsum is the industry standard when placing dummy text onto an unfinished page, whether it's a newspaper, magazine, or advertisement.",
       "codigoSeguridad": "12345678",
       "linkImagenVideo": "https://res.cloudinary.com/dkj7iqhfy/image/upload/v1685481249/jqbckgtqqpcyqwjwg6au.jpg",
       "id": 9
     },
     {
-      "titulo": "Box Model y Box sizing",
-      "linkVideo": "https://www.youtube.com/watch?v=ts9qfCKamKg&t=5s",
+      "titulo": "Resident Evil 2 remake",
+      "linkVideo": "https://youtu.be/b_ehSaRqf0A?si=nZWNeIxVtAklx_pT",
       "Categoria": "Resident Evil Games",
-      "descripcion": "Box Model y Box sizing",
+      "descripcion": "In the modern design world, Lorem Ipsum is the industry standard when placing dummy text onto an unfinished page, whether it's a newspaper, magazine, or advertisement.",
       "codigoSeguridad": "12345678",
-      "linkImagenVideo": "https://res.cloudinary.com/dkj7iqhfy/image/upload/v1685567216/yc9xhaj1airravb07kdh.jpg",
+      "linkImagenVideo": "https://res.cloudinary.com/dvxcdxqpk/image/upload/v1693782517/pjpjvdf3dq31yknb1pl7.webp",
       "id": 10
     },
     {
       "titulo": "Empresas que aprenden ",
       "linkVideo": "https://www.youtube.com/watch?v=mwNfWRsDDWE",
       "Categoria": "Cultura Pop de Resident Evil",
-      "descripcion": "**El aprendizaje organizacional promueve tanto la adaptación al cambio como el crecimiento de la empresa**. Pero, ¿tienes alguna idea de cómo hacerse esto? En este Alura+, Priscila Stuani habla sobre el papel de la organización en el proceso de aprendizaje de sus profesionales.\n\nLas organizaciones tienen responsabilidades en el proceso de aprendizaje de sus colaboradores. Una de las formas de actuar en este sentido es potenciar algunas habilidades, como el pensamiento sistémico, el dominio personal, trabajar modelos mentales, construir una visión compartida, aprender en equipo y reconocer los patrones de interacción que dificultan este aprendizaje, además de componentes de tecnologías estimulantes.",
+      "descripcion": "In the modern design world, Lorem Ipsum is the industry standard.",
       "codigoSeguridad": "12345678",
       "linkImagenVideo": "https://res.cloudinary.com/dkj7iqhfy/image/upload/v1685579843/mxcvksyyqrdo5jdwrmxt.png",
       "id": 11
@@ -58,27 +58,27 @@
       "titulo": "7 Soft Skills más deseadas por las empresas",
       "linkVideo": "https://www.youtube.com/watch?v=YhR7Zp8NUzE",
       "Categoria": "Cultura Pop de Resident Evil",
-      "descripcion": "Seguro que ya escuchaste hablar sobre las Soft Skills, pero ¿sabes cuáles son las 7 más buscadas por las empresas? Quédate en este video con nosotros que vamos a explicarte la importancia de estas habilidades y porque son tan requeridas en el mercado laboral.\n\n¿Quieres saber más?\n\nVe nuestros cursos de Innovación y Gestión:\nhttps://www.aluracursos.com/cursos-on...\n\nEncuentra variados artículos sobre tecnologia en nuestro blog: https://www.aluracursos.com/blog/\n\n¡Videos nuevos todos los miércoles! A las 6pm México * 7pm Colombia * 8pm Bolivia * 9pm Argentina/Chile",
+      "descripcion": "In the modern design world, Lorem Ipsum is the industry standard when placing dummy text onto an unfinished page, whether it's a newspaper, magazine, or advertisement.",
       "codigoSeguridad": "12345678",
       "linkImagenVideo": "https://res.cloudinary.com/dkj7iqhfy/image/upload/v1685580828/hze70ejhyfzdw74k8tk8.jpg",
       "id": 12
     },
     {
-      "titulo": "Aprendiendo a utilizar Figma",
-      "linkVideo": "https://www.youtube.com/watch?v=UuAX5azcvDQ",
+      "titulo": "Resident Evil village",
+      "linkVideo": "https://youtu.be/TdsPn_0QScM?si=gLhpQhj_F_hk0n5X",
       "Categoria": "Resident Evil Games",
-      "descripcion": "\nEn este Alura+, Genesys, instructora de Alura Latam, nos responde esa pregunta y nos muestra esta conocida herramienta.\n\n¿Quieres saber más?\n\nEntra a nuestra plataforma, dónde encontrarás variados cursos de tecnología:\nhttps://www.aluracursos.com/\n\nEncuentra variados artículos sobre tecnologia en nuestro blog: https://www.aluracursos.com/blog/\n\n¡Videos nuevos todos los miércoles! A las 6pm México * 7pm Colombia * 8pm Bolivia * 9pm Argentina/Chile",
+      "descripcion": "In the modern design world.",
       "codigoSeguridad": "12345678",
-      "linkImagenVideo": "https://res.cloudinary.com/dkj7iqhfy/image/upload/v1685820371/g05mariipqt8dttkzxkb.jpg",
+      "linkImagenVideo": "https://res.cloudinary.com/dvxcdxqpk/image/upload/v1693782516/yfwdpo2jlmrxrzxinw4c.webp",
       "id": 15
     },
     {
-      "titulo": "Equipo front end",
-      "linkVideo": "https://www.youtube.com/watch?v=rpvrLaBQwgg",
+      "titulo": "Resident Evil VII",
+      "linkVideo": "https://youtu.be/ZSl9XKrcaNw?si=GFlKEU6Z9XLan_Xq",
       "Categoria": "Resident Evil Games",
-      "descripcion": "¿Estás empezando tus estudios de Programación? ¿Te interesa todo lo que es la creación de Páginas Web Desarrollo de Softwares? ¿O estás pensando en cambiar de carrera y entrar a la maravillosa area de tecnología?",
+      "descripcion": "In the modern design world, Lorem Ipsum is the industry standard when placing dummy text onto an unfinished page, whether it's a newspaper, magazine, or advertisement.",
       "codigoSeguridad": "12345678",
-      "linkImagenVideo": "https://res.cloudinary.com/dkj7iqhfy/image/upload/v1685821856/q58g3swdjnxv30u3jkux.png",
+      "linkImagenVideo": "https://res.cloudinary.com/dvxcdxqpk/image/upload/v1693782517/fngah8byv7f1uslujmvs.webp",
       "id": 16
     }
   ],
@@ -92,7 +92,7 @@
     {
       "categoriaNombre": "Survival Horror",
       "categoriaTexto": "Encuentros con enemigos",
-      "categoriaColor": "#EAD950",
+      "categoriaColor": "#2E8BD6",
       "codigoSeguridad": "12345678",
       "id": 2
     },
