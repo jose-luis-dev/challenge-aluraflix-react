@@ -216,7 +216,7 @@ function FormularioVideos() {
             <Grid rowSpacing={5} container sx={{
             }}>
               <Grid item xs={12}  >
-                <Typography align='center' variant='h3' color="#e9e3b0"  > Agregar video</Typography>
+                <Typography align='center' variant='h3' color="#ffffff"  > Nuevo video</Typography>
 
               </Grid>
 
