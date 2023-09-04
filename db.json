@@ -19,21 +19,21 @@
       "codigoSeguridad": ""
     },
     {
-      "titulo": "Que son las softs skills",
-      "linkVideo": "https://www.youtube.com/watch?v=vhwspfvI52k&t=189s",
+      "titulo": "Mejores escenas de resident evil",
+      "linkVideo": "https://youtu.be/xPD-18lpKlA?si=xCUWwp3l-QP1WG2O",
       "Categoria": "Cultura Pop de Resident Evil",
       "descripcion": "In the modern design world, Lorem Ipsum is the industry standard when placing dummy text onto an unfinished page, whether it's a newspaper, magazine, or advertisement.",
       "codigoSeguridad": "12345678",
-      "linkImagenVideo": "https://res.cloudinary.com/dkj7iqhfy/image/upload/v1685480826/m4ja6ibudvhstw50uglm.jpg",
+      "linkImagenVideo": "https://res.cloudinary.com/dvxcdxqpk/image/upload/v1693785693/maxresdefault_1_jgkrft.jpg",
       "id": 8
     },
     {
-      "titulo": "Spring Framework. ¿Qué es ? ",
-      "linkVideo": "https://www.youtube.com/watch?v=t-iqt1b2qqk",
+      "titulo": "Enemigos en resident evil 4",
+      "linkVideo": "https://youtu.be/2cMhPZNsmg0?si=TZ6PLAKDpJvdplQ5",
       "Categoria": "Survival Horror",
       "descripcion": "In the modern design world, Lorem Ipsum is the industry standard when placing dummy text onto an unfinished page, whether it's a newspaper, magazine, or advertisement.",
       "codigoSeguridad": "12345678",
-      "linkImagenVideo": "https://res.cloudinary.com/dkj7iqhfy/image/upload/v1685481249/jqbckgtqqpcyqwjwg6au.jpg",
+      "linkImagenVideo": "https://res.cloudinary.com/dvxcdxqpk/image/upload/v1693785138/maxresdefault_rjtfk2.jpg",
       "id": 9
     },
     {
@@ -46,22 +46,13 @@
       "id": 10
     },
     {
-      "titulo": "Empresas que aprenden ",
-      "linkVideo": "https://www.youtube.com/watch?v=mwNfWRsDDWE",
+      "titulo": "Mejores escenas de terror",
+      "linkVideo": "https://youtu.be/7RUID8lq_1w?si=OVpRnoV6-cNg1Zaq",
       "Categoria": "Cultura Pop de Resident Evil",
       "descripcion": "In the modern design world, Lorem Ipsum is the industry standard.",
       "codigoSeguridad": "12345678",
-      "linkImagenVideo": "https://res.cloudinary.com/dkj7iqhfy/image/upload/v1685579843/mxcvksyyqrdo5jdwrmxt.png",
+      "linkImagenVideo": "https://res.cloudinary.com/dvxcdxqpk/image/upload/v1693785855/maxresdefault_2_kgdca3.jpg",
       "id": 11
-    },
-    {
-      "titulo": "7 Soft Skills más deseadas por las empresas",
-      "linkVideo": "https://www.youtube.com/watch?v=YhR7Zp8NUzE",
-      "Categoria": "Cultura Pop de Resident Evil",
-      "descripcion": "In the modern design world, Lorem Ipsum is the industry standard when placing dummy text onto an unfinished page, whether it's a newspaper, magazine, or advertisement.",
-      "codigoSeguridad": "12345678",
-      "linkImagenVideo": "https://res.cloudinary.com/dkj7iqhfy/image/upload/v1685580828/hze70ejhyfzdw74k8tk8.jpg",
-      "id": 12
     },
     {
       "titulo": "Resident Evil village",
@@ -98,7 +89,7 @@
     },
     {
       "categoriaNombre": "Cultura Pop de Resident Evil",
-      "categoriaTexto": "Mercancía y coleccionables",
+      "categoriaTexto": "Cosplay y arte de los fans",
       "categoriaColor": "#41C134",
       "codigoSeguridad": "12345678",
       "id": 3
