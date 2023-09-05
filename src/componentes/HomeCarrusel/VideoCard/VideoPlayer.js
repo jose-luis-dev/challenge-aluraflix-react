@@ -1,4 +1,4 @@
-import React, { useState, useContext  } from 'react';
+import React, { useState, useContext, useEffect  } from 'react';
 import ReactPlayer from "react-player";
 import styled from "styled-components";
 import { useNavigate} from "react-router-dom";
@@ -55,10 +55,25 @@ const VideoPlayer = ({ videoUrl }) => {
     setLoading(false);
   }
 
+  useEffect(() => {
+    // Almacena videoToPlay en sessionStorage cuando cambia
+    sessionStorage.setItem('videoToPlay', videoToPlay);
+  }, [videoToPlay]);
+
+  useEffect(() => {
+    // Recupera videoToPlay de sessionStorage cuando se monta el componente
+    const storedVideoToPlay = sessionStorage.getItem('videoToPlay');
+    if (storedVideoToPlay) {
+      setLoading(false);
+    }
+  }, []);
+
+
+
   return (
     <VideoContainer>   
       <PlayerWrapper loading={loading}>
-            <Fab color="primary" aria-label="add" className="boton" onClick={ () => volverMain()}>
+            <Fab color="error" aria-label="add" className="boton" onClick={ () => volverMain()}>
               X
             </Fab>
             <StyledPlayer url={videoToPlay}

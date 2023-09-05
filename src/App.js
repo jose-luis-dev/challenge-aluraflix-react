@@ -3,14 +3,14 @@ import './styles/reset.css'
 import theme  from './styles/theme'
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import Banner from '../src/componentes/Banner';
-import Slider from './componentes/Carousel/Slider/Slider';
+import Slider from './componentes/HomeCarrusel/Slider/Slider';
 import Footer from './componentes/Footer'
 import MainSection from './componentes/MainSection';
 import React, { useState, useEffect , useReducer } from 'react';
 import axios from 'axios';
 import { createBrowserRouter,  Route,  createRoutesFromElements, RouterProvider  } from 'react-router-dom';
 import MyContext from '../src/Context'
-import VideoPlayer from './componentes/Carousel/Slider/VideoPlayer';
+import VideoPlayer from './componentes/HomeCarrusel/VideoCard/VideoPlayer';
 import  FormularioCategoria from './componentes/FormularioCategoria'
 import FormularioVideos from './componentes/FormularioVideos';
 import { SnackbarProvider } from "notistack";
@@ -41,14 +41,11 @@ function App() {
   }, [reducerValue]);
 
 
-
-
   const handleVideoLoading = (videoUrl) => {
 
-    console.log(videoUrl)
+    // console.log(videoUrl)
     setVideoToPlay(videoUrl);
   };
-
 
  const router = createBrowserRouter(
   createRoutesFromElements(
@@ -100,20 +97,7 @@ function App() {
     
   );
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
 
 }
 

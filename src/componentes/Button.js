@@ -15,11 +15,12 @@ border: 2px solid #df3616;
 border-radius: 4px;
 display: block;
 
-${props => css`
-    @media (max-width: ${props.theme.breakpoints.laptop}) {
-      display:${props=> props.display}; 
-   ` }
+
 `;
 
 export default Button
 
+/* ${props => css`
+    @media (max-width: ${props.theme.breakpoints.laptop}) {
+
+   ` } */

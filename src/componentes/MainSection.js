@@ -1,8 +1,11 @@
 import React , { useState, useEffect }  from 'react'
-import Slider from './Carousel/Slider/Slider'
-
+import Slider from './HomeCarrusel/Slider/Slider'
 import Banner from '../componentes/Banner'
-import styled , {css} from "styled-components"
+import styled , {css} from "styled-components";
+import CategoriaVideos from './CardContenido/CategoriaVideos';
+
+
+
 
 const MainSectionContainer = styled.div`
     background-color: #191919;
@@ -12,26 +15,20 @@ const MainSectionContainer = styled.div`
       padding-top:1.5rem;    
    ` }
 `
+function MainSection({ categorias, videos }) {
+  console.log(videos);
+  console.log(categorias);
 
-
-
-
-
-
-
-function MainSection({categorias , videos}) {
   return (
     <>
-    <Banner/>
-    <MainSectionContainer>
-         
-          <Slider categorias={categorias } videos={videos}/>
-  
-    </MainSectionContainer>
-
+      <Banner />
+      <MainSectionContainer>
+      
+        <Slider videos={videos} categorias={categorias} />
+        <CategoriaVideos videos={videos} categorias={categorias} />)
+        </MainSectionContainer>
     </>
-
-  )
+  );
 }
 
-export default MainSection
+export default MainSection;

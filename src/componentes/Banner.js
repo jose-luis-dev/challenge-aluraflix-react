@@ -3,6 +3,8 @@ import styled, { css } from "styled-components"
 import slider1 from "../assets/Slider/slider1.png"
 import BannerText from './BannerText';
 import bannerCard from '../assets/thumbnails/bannerCard.png';
+import { Link } from 'react-router-dom';
+import videoPlayer from './HomeCarrusel/VideoCard/VideoPlayer'
 import Button from '../componentes/Button'
 
 import { colorGreyLight, colorBlackDark } from '../ui/colores';
@@ -10,7 +12,7 @@ import { colorGreyLight, colorBlackDark } from '../ui/colores';
 const Container = styled.div`
   position: relative;
   width: 100%;
-  height: 90vh;
+  height: 80vh;
   
   min-width:320px;
 
@@ -29,7 +31,7 @@ const BannerImage = styled.div`
     background-size: cover;
     background-position: center center;
    
-    height: 90vh; 
+    height: 80vh; 
     ${props => css`
     @media (max-width: ${props.theme.breakpoints.laptop}) {
       height: 65vh;     
@@ -45,7 +47,7 @@ const Overlay = styled.div`
   top: 0;
   left: 0;
   width: 100%;
-  height: 90vh;
+  height: 80vh;
   background-color: rgba(0, 0, 0, 0.5); 
   z-index:10;
   
@@ -66,12 +68,13 @@ const Titulo = styled.div`
    align-items:center;
    justify-content:center;
    font-family: 'Roboto', sans-serif;
-   font-size:4rem;
+   font-size:3rem;
+   position:relative;
    ${props => css`
     @media (max-width: ${props.theme.breakpoints.laptop}) {
       display: none;  
    ` }
-
+    
 
 
 
@@ -81,6 +84,7 @@ const SubTitulo = styled.div`
   color:white;
   font-size: 2.5rem;
   margin-top:1.5rem;
+  position:relative;
  
   ${props => css`
     @media (max-width: ${props.theme.breakpoints.laptop}) {
@@ -88,7 +92,9 @@ const SubTitulo = styled.div`
       font-size: 2.5rem;
       min-width:320px;
       font-weight:203;
-      margin-left:8%;    
+      margin-left:8%;
+      bottom: 70%;
+      text-align:center;    
    ` }
 `;
 
@@ -151,18 +157,6 @@ const BannerCard = styled.img`
 `;
 
 
-const BotonVer = styled(Button)`
-
-align-self:center;
-      
-${props => css`
-    @media (min-width: ${props.theme.breakpoints.laptop}) {
-      display: none;
-   ` }
-`
-
-
-
 const Banner = () => {
   return (
     <Container>
@@ -170,18 +164,16 @@ const Banner = () => {
       <BannerImage>
         <BannerContent>
           <BannerTexContent>
-            <Titulo>Aluraflix</Titulo>
+            <Titulo>Raccoonflix</Titulo>
             <SubTitulo>
                Resident Evil Challenge
             </SubTitulo>
-            <BotonVer inputColor={colorBlackDark} borderColor={colorGreyLight} backgroundColor={colorGreyLight} fontSize="1.5em" btnwidth="9rem" height="3rem"  >Ver</BotonVer>
-
             <TextoBanner>
             Supera este desafío en el mundo de Resident Evil. Este challenge es una oportunidad para poner a prueba tus habilidades y aplicar tus conocimientos de React en un entorno temático inspirado en la icónica franquicia de survival horror. Enfréntate a los problemas y demuestra tu destreza mientras exploras el universo de Resident Evil en tu camino hacia la victoria. ¡Adéntrate en la pesadilla y domina React!.
             </TextoBanner>
 
           </BannerTexContent>
-          <BannerCard src={bannerCard} alt="Aluraflix Logo" />
+          <BannerCard src={bannerCard} alt="Resident Logo" />
         </BannerContent>
       </BannerImage>
       <Overlay />
