@@ -16,8 +16,8 @@ const MainSectionContainer = styled.div`
    ` }
 `
 function MainSection({ categorias, videos }) {
-  console.log(videos);
-  console.log(categorias);
+  // console.log(videos);
+  // console.log(categorias);
 
   return (
     <>

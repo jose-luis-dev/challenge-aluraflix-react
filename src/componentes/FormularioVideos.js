@@ -166,7 +166,7 @@ function FormularioVideos() {
         );
         const { secure_url } = response.data;
         data.linkImagenVideo = secure_url;
-        console.log( data.linkImagenVideo)
+        // console.log( data.linkImagenVideo)
       }
       
       // Send the form data to the server

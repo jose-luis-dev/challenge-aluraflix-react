@@ -27,6 +27,7 @@ function App() {
   const [videoToPlay,setVideoToPlay] = useState();
 
   const [reducerValue, forceUpdate] = useReducer(x => x + 1, 0);
+  
 
   useEffect(() => {
     axios.get('https://my-json-server.typicode.com/jose-luis-dev/challenge-aluraflix-react/categorias')

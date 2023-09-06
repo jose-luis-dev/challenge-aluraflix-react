@@ -30,10 +30,11 @@ const Logo = styled.img`
 `
 
 const Text = styled.p`
-    margin-top: 1rem; /* Agrega espacio entre el logo y el texto */
+    margin-top: 0.6rem; /* Agrega espacio entre el logo y el texto */
 `
 const SocialIcons = styled.div`
     margin-top: 1rem;
+    margin-bottom: 1rem;
     display: flex;
 `
 

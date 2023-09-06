@@ -40,3 +40,4 @@ export default function ActionAreaCard({ video, categoriaColor, onClick }) {
     </StyledCard>
   );
 }
+

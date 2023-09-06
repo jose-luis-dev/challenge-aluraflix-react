@@ -68,8 +68,6 @@ const VideoPlayer = ({ videoUrl }) => {
     }
   }, []);
 
-
-
   return (
     <VideoContainer>   
       <PlayerWrapper loading={loading}>

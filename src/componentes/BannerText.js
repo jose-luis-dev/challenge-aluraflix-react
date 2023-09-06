@@ -8,7 +8,6 @@ const Title = styled.h1`
   `
 
 const BannerText = () => {
-  console.log(BannerText)
   return (
     <div>     
        <Title>BannerText</Title>   

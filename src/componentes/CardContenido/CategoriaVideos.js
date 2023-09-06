@@ -11,6 +11,7 @@ import VideoPlayer from '../HomeCarrusel/VideoCard/VideoPlayer';
 const CategoryContainer = styled.div`
   color:#ffff;
   display:flex;
+  margin-top:10px;
 
   height:5rem;
   /* margin-left:0.3%; */
@@ -21,7 +22,7 @@ const CategoryContainer = styled.div`
        flex:wrap;
 
     }
-  @media screen and (min-width: 992px) {
+  @media screen and (max-width: 992px) {
     display: ${(props) =>
     props.isHidden && "none"};
   }
@@ -138,12 +139,13 @@ function CategoriaVideos({ categorias, videos }) {
     return videos.some(video => video.Categoria === categoria.categoriaNombre);
   });
   return (
-    <div>
+    <div >
       <SwiperContainer>
         {
           filteredCategories.map((categoria) => (
-            <div>
-              <CategoryContainer isHidden={categoria.categoriaNombre === "Front End"}>
+            <div key={categoria.id} >
+
+              <CategoryContainer isHidden={categoria.categoriaNombre === "Resident Evil Games"}>
                 <CategoriaTitulo categoriaColor={categoria.categoriaColor}>
                   {categoria.categoriaNombre}
                 </CategoriaTitulo>
@@ -156,8 +158,8 @@ function CategoriaVideos({ categorias, videos }) {
                 slidesPerView={4}
                 slidesPerGroup={2}
                 navigation={true} modules={[Navigation]}
-                onSlideChange={() => console.log('slide change')}
-                onSwiper={(swiper) => console.log(swiper)}
+                // onSlideChange={() => console.log('slide change')}
+                // onSwiper={(swiper) => console.log(swiper)}
 
                 breakpoints={{
                   320: {
@@ -183,12 +185,12 @@ function CategoriaVideos({ categorias, videos }) {
                 {
                   videos.map((video, index) => 
                     video.Categoria === categoria.categoriaNombre && 
-                      <StyledSwiperSlide key={video.id} borderColor={categoria.categoriaColor}
+                      <StyledSwiperSlide key={video.id} 
                   onClick={() => handleVideoLoading(video.linkVideo)}
                   >
                     <Link to={"/videoPlayer"}>
                     <div className="slide-container"    >
-                        <img className="videoImage" src={video.linkImagenVideo} />
+                        <img className="videoImage" src={video.linkImagenVideo} style={{ borderColor: categoria.categoriaColor }} />
                     </div>
                     </Link>
                   </StyledSwiperSlide >)

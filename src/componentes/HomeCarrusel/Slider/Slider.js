@@ -7,15 +7,13 @@ import "slick-carousel/slick/slick-theme.css";
 import ActionAreaCard from '../../CardContenido/CardContenidoCarrusel';
 import VideoPlayer from '../VideoCard/VideoPlayer';
 
-
-
 //Funcion para mostrar en carrusel los videos agregados
 function MySlider({ videos }) {
   const { handleVideoLoading, setVideoToPlay } = useContext(MyContext);
-  console.log('videos:', videos);
+  // console.log('videos:', videos);
 
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     slidesToShow: 4,
     slidesToScroll: 1,
