@@ -1,438 +1,233 @@
-
-import { useForm, Controller } from 'react-hook-form';
-
-import React, { useEffect, useState, useContext , useCallback} from 'react'
+import React, { useState, useEffect } from 'react';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Container from '@mui/material/Container';
-import { Typography, Input } from '@mui/material';
-// import styled from 'styled-components';
+import Typography from '@mui/material/Typography';
 import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
 import Button from '@mui/material/Button';
-import ButtonGroup from '@mui/material/ButtonGroup';
-import Grid from '@mui/material/Unstable_Grid2'; // Grid version 2
-import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { blue, grey } from '@mui/material/colors';
-import InputLabel from '@mui/material/InputLabel';
+import Grid from '@mui/material/Grid';
 import FormControl from '@mui/material/FormControl';
+import ButtonGroup from '@mui/material/ButtonGroup';
 import axios from 'axios';
-import { useSnackbar } from "notistack";
+import InputLabel from '@mui/material/InputLabel';
+import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
-import MyContext from '../Context';
-import { styled } from '@mui/material/styles'
+import { v4 as uuidv4 } from 'uuid';
 
-import { useDropzone } from 'react-dropzone';
-import Resizer from 'react-image-file-resizer';
+const FormularioVideos = () => {
+  // Estado para las categorías disponibles
+  const [categorias, setCategorias] = useState([]);
 
-
-const theme = createTheme({
-  palette: {
-    primary: {
-      // Purple and green play nicely together.
-      main: blue[700],
-    },
-    secondary: {
-      // This is green.A700 as hex.
-      main: grey[400],
-    },
-  },
-});
-
-
-const CategoriaButton = styled(Button)(({ theme }) => ({
-
-  [theme.breakpoints.down('md')]: {
-    display: 'none', // Hide the button on smaller screens (breakpoint: 960px)
-  },
-}));
-
-const DropzoneContainer = styled('div')`
-  border: 2px dashed #212121;
-  border-radius: 4px;
-  height:15rem;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  background-color: #53585D;
-  color: #212121;
-  cursor: pointer;
-  p {
-    margin-top: 1rem;
-  }
-`;
-
-function FormularioVideos() {
-  const [acceptedFiles, setAcceptedFiles] = useState([]);
-  const [previewImage, setPreviewImage] = useState(null);
-  const { enqueueSnackbar } = useSnackbar();
-  const navigate = useNavigate();
-  const { forceUpdate } = useContext(MyContext);
-  const [options, setOptions] = useState([]);
-  const [selectedOption, setSelectedOption] = useState('');
-
-  const volverMain = () => {
-    navigate('/');
-  }
-
-
-  const files = acceptedFiles.map(file => (
-    <li key={file.path}>
-      {file.path} - {file.size} bytes
-    </li>
-  ));
-
-
-  const onDrop = useCallback((droppedFiles) => {
-    const updatedFiles = [...acceptedFiles, ...droppedFiles];
-    setAcceptedFiles(updatedFiles);
-  
-    const file = droppedFiles[0];
-    const reader = new FileReader();
-    reader.onload = () => {
-      const image = new Image();
-      image.onload = () => {
-        const canvas = document.createElement('canvas');
-        const ctx = canvas.getContext('2d');
-  
-        // Calculate the new dimensions to fit within a specific width and height
-        const maxWidth = 300;
-        const maxHeight = 300;
-        let width = image.width;
-        let height = image.height;
-  
-        if (width > maxWidth || height > maxHeight) {
-          const aspectRatio = width / height;
-          if (width > height) {
-            width = maxWidth;
-            height = width / aspectRatio;
-          } else {
-            height = maxHeight;
-            width = height * aspectRatio;
-          }
-        }
-  
-        // Resize the image on the canvas
-        canvas.width = width;
-        canvas.height = height;
-        ctx.drawImage(image, 0, 0, width, height);
-  
-        // Get the resized image as a data URL
-        const resizedImageDataUrl = canvas.toDataURL('image/jpeg');
-  
-        setPreviewImage(resizedImageDataUrl);
-      };
-      image.src = reader.result;
-    };
-    reader.readAsDataURL(file);
-  }, [acceptedFiles]);
-  
-  const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop });
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch('https://my-json-server.typicode.com/jose-luis-dev/challenge-aluraflix-react/categorias');
-        const data = await response.json();
-        setOptions(data);
-      } catch (error) {
-        console.error('Error fetching data de la  API:', error);
-      }
-    };
-
-    fetchData();
-  }, []);
-
-  const handleChange = (event) => {
-    setSelectedOption(event.target.value);
-  };
-
-  const { control, handleSubmit, reset, formState: { errors } } = useForm();
-
-  const onSubmit = async (data) => {
+  // Función para cargar las categorías disponibles utilizando Axios
+  const fetchCategorias = async () => {
     try {
-      // Upload the image to Cloudinary
-      if (acceptedFiles.length > 0) {
-        const formData = new FormData();
-        formData.append('file', acceptedFiles[0]);
-        formData.append('upload_preset',  process.env.REACT_APP_CLOUDINARY_UPLOAD_PRESET);
-
-        const response = await axios.post(
-          `https://api.cloudinary.com/v1_1/${process.env.REACT_APP_CLOUDINARY_CLOUD_NAME}/image/upload`,
-          formData
-        );
-        const { secure_url } = response.data;
-        data.linkImagenVideo = secure_url;
-        // console.log( data.linkImagenVideo)
-      }
-      
-      // Send the form data to the server
-      const response = await axios.post('https://my-json-server.typicode.com/jose-luis-dev/challenge-aluraflix-react/categorias', data);
-      console.log(response.data);
-      console.log(response.status);
-      enqueueSnackbar('Video agregado correctamente', {
-        variant: 'success',
-        anchorOrigin: {
-          vertical: 'top',
-          horizontal: 'right',
-        },
-      });
-
-      volverMain();
-      forceUpdate();
+      const response = await axios.get('https://my-json-server.typicode.com/jose-luis-dev/challenge-aluraflix-react/categorias');
+      setCategorias(response.data);
     } catch (error) {
-      console.error(error);
-      enqueueSnackbar('Hubo un problema el video no pudo ser insertado', {
-        variant: 'error',
-        anchorOrigin: {
-          vertical: 'top',
-          horizontal: 'right',
-        },
-      });
+      console.error('Error al obtener las categorías:', error);
     }
   };
-  const handleDelete = () => {
-    setPreviewImage(null);
-    setAcceptedFiles([]);
+
+  useEffect(() => {
+    // Carga las categorías disponibles cuando se monta el componente
+    fetchCategorias();
+  }, []);
+  
+  // Estado para los datos del formulario
+  const [formData, setFormData] = useState({
+    titulo: '',
+    linkVideo: '',
+    categoria:  '', // Establece la primera categoría por defecto
+    descripcion: '',
+    codigoSeguridad: '',
+    linkImagenVideo: '', 
+    // Agrega otros campos aquí si es necesario
+  });
+
+  // Estado para la imagen seleccionada
+  const [selectedImage, setSelectedImage] = useState(null);
+  
+  // Función para manejar la selección de una imagen
+  const handleImageChange = (event) => {
+  const file = event.target.files[0];
+  setSelectedImage(file);
   };
-  const iraCategoria = () => {
-    // reset()
-    console.log("categoria")
-    navigate('/formulariocategoria');
+
+  // Función para manejar cambios en los campos del formulario
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    setFormData({ ...formData, [name]: value });
   };
-  const resetForm = () => {
-    reset(); // Reset the form values to their initial state
+
+  // Función para limpiar el formulario y la imagen seleccionada
+  const handleClear = () => {
+    setFormData({
+      titulo: '',
+      linkVideo: '',
+      categoria: '',
+      descripcion: '',
+      codigoSeguridad: '',
+    });
+    setSelectedImage(null);
   };
+
+    // Obtén la función de navegación
+    const navigate = useNavigate();
+
+// Función para manejar el envío del formulario
+const handleSubmit = async (event) => {
+  event.preventDefault();
+
+  try {
+    // Crea un objeto con los datos del formulario y la imagen seleccionada
+    const videoData = {
+      id: uuidv4(),
+      titulo: formData.titulo,
+      linkVideo: formData.linkVideo,
+      categoria: formData.categoria,
+      descripcion: formData.descripcion,
+      codigoSeguridad: formData.codigoSeguridad,
+      linkImagenVideo: formData.linkImagenVideo,
+      // Agrega otros campos aquí si es necesario
+    };
+     // Agrega un console.log para verificar los datos del video antes de enviarlos al servidor
+     console.log('Datos del video a enviar:', videoData);
+    // Realiza una solicitud POST al servidor para agregar el nuevo video
+    const response = await fetch('https://my-json-server.typicode.com/jose-luis-dev/challenge-aluraflix-react/videos', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(videoData),
+    });
+
+      // Verifica si la solicitud fue exitosa (código de estado 201)
+      if (response.status === 201) {
+        // El video se ha agregado correctamente, puedes redirigir al usuario a otra página o mostrar un mensaje de éxito
+        alert('Video agregado con éxito');
+        // Redirige al usuario a la página principal u otra página según tus necesidades
+        navigate('/'); // Reemplaza '/' con la URL a la que deseas redirigir
+      } else {
+        // Si la solicitud no fue exitosa, muestra un mensaje de error
+        console.error('Error al agregar el video:', response.statusText);
+        console.log('Código de estado de la respuesta:', response.status);
+      }
+  } catch (error) {
+    console.error('Error al agregar el video:', error);
+    
+  }
+};
+
+
+
 
   return (
-    <ThemeProvider theme={theme}>
-      <Box sx={{ height: "auto", backgroundColor: '#191919', paddingTop: '1rem', paddingBottom: '2rem', minWidth: '320px' }}>
+    <Container maxWidth="md">
+      <form onSubmit={handleSubmit}>
+        <Grid container spacing={2}>
+          <Grid item xs={12}>
+            <Typography variant="h4" align="center" marginTop={5}>
+              Nuevo video
+            </Typography>
+          </Grid>
+          <Grid item xs={12}>
+            <TextField
+              fullWidth
+              label="Título"
+              name="titulo"
+              value={formData.titulo}
+              onChange={handleInputChange}
+              required
+            />
+          </Grid>
+          <Grid item xs={12}>
+            <TextField
+              fullWidth
+              label="Link del video"
+              name="linkVideo"
+              value={formData.linkVideo}
+              onChange={handleInputChange}
+              required
+            />
+          </Grid>
+          <Grid item xs={12}>
+            <TextField
+              type="text"
+              name="linkImagenVideo"
+              label="Enlace de la imagen del video (URL)"
+              fullWidth
+              value={formData.linkImagenVideo}
+              onChange={handleInputChange}
+              // Otros atributos o propiedades que necesites
+            />
+          </Grid>
+          <Grid item xs={12}>
+          <FormControl fullWidth>
+            <InputLabel id="categoria-label">Escoja una categoría</InputLabel>
+            <Select
+              labelId="categoria-label"
+              name="categoria"
+              value={formData.categoria}
+              onChange={handleInputChange}
+              required
+            >
+              <MenuItem value="Escoja una categoría" disabled>
+                Escoja una categoría
+              </MenuItem>
+              {categorias.map((categoria) => (
+                <MenuItem key={categoria.id} value={categoria.categoriaNombre}>
+                  {categoria.categoriaNombre}
+                </MenuItem>
+              ))}
+            </Select>
+          </FormControl>
+          </Grid>
+          <Grid item xs={12}>
+            <TextField
+              fullWidth
+              label="Descripción"
+              name="descripcion"
+              value={formData.descripcion}
+              onChange={handleInputChange}
+              multiline
+              rows={4}
+              required
+            />
+          </Grid>
+          <Grid item xs={12}>
+            <TextField
+              fullWidth
+              label="Código de seguridad"
+              name="codigoSeguridad"
+              value={formData.codigoSeguridad}
+              onChange={handleInputChange}
+              required
+            />
+          </Grid>
+        </Grid>
+        <ButtonGroup  
+          variant="outlined"
+          size="large"
+          // aria-label="small button group"
+          orientation="vertical"
+          aria-label="vertical outlined button group"
+        >
+      <Button variant="contained" color="success" style={{ marginTop: '8px' }}onClick={handleSubmit}>
+        Agregar Video
+      </Button>
+      <Link to="/formularioCategoria" style={{ textDecoration: 'none' }}>
+        <Button variant="contained" color="primary" style={{ marginTop: '8px' }}>
+          Crear Nueva Categoria
+        </Button>   
+      </Link>
+      <Button variant="contained" color="secondary" style={{ margin: '8px 0px 9px' }} onClick={handleClear}>
+        Limpiar
+      </Button>
+        </ButtonGroup>
+      </form>
+    </Container>
+  );
+};
 
-        <Container maxWidth="xl" >
-          <form onSubmit={handleSubmit(onSubmit)}>
-            <Grid rowSpacing={5} container sx={{
-            }}>
-              <Grid item xs={12}  >
-                <Typography align='center' variant='h3' color="#ffffff"  > Nuevo video</Typography>
-
-              </Grid>
-
-              <Grid item xs={12}>
-
-                <Controller
-                  name="titulo"
-                  control={control}
-                  defaultValue=""
-                  rules={{ required: 'Titulo es requerido' }}
-                  render={({ field }) => (
-                    <div>
-                      <TextField
-                        {...field}
-                        sx={{ backgroundColor: '#eae9e8', color: '#101010' }}
-                        variant="filled"
-                        error={!!errors.titulo}
-                        // helperText={fieldState.error?.message}
-                        fullWidth
-                        label="Título"
-                        id="titulo"
-                        InputLabelProps={{
-                          sx: {},
-                        }}
-                      />
-                      {errors.titulo && (
-                        <Typography variant="body2" color="error">
-                          {errors.titulo.message}
-                        </Typography>
-                      )}
-                    </div>
-
-                  )}
-                />
-              </Grid>
-
-              <Grid item xs={12}>
-                <Controller
-                  name="linkVideo"
-                  control={control}
-                  defaultValue=""
-                  rules={{ required: 'Link de video es requerido' }}
-                  render={({ field }) => (
-                    <div>
-                      <TextField
-                        {...field}
-                        sx={{ backgroundColor: '#eae9e8', color: '#101010' }}
-                        variant="filled"
-                        error={!!errors.linkVideo}
-                        fullWidth
-                        label="Link del video"
-                        id="linkVideo"
-                      />
-                      {errors.linkVideo && (
-                        <Typography variant="body2" color="error">
-                          {errors.linkVideo.message}
-                        </Typography>
-                      )}
-                    </div>
-                  )}
-                />
-              </Grid>
-
-              <Grid item xs={12}>
-                <DropzoneContainer {...getRootProps({ className: 'dropzone' })}>
-                  {previewImage ? (
-                    <img src={previewImage} alt="Preview" />
-                  ) : (
-                    <p>Arrastrar imagen aquí , o hacer click para seleccionar luna foto</p>
-                  )}
-
-                </DropzoneContainer>
-                <Box sx={{ paddingTop: '1rem', color: 'white', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                  {/* <h4>Fotos</h4> */}
-                  <ul>{files}</ul>
-                  {acceptedFiles.length > 0 && (
-                    <Button variant="contained" color="primary" onClick={handleDelete} >
-                      Borrar
-                    </Button>
-                  )}
-                </Box>
-
-              </Grid>
-
-              <Grid item xs={12}>
-                <FormControl fullWidth>
-                  <InputLabel id="demo-simple-select-helper-label">Escoja una categoría</InputLabel>
-                  <Controller
-                    name="Categoria"
-                    control={control}
-                    defaultValue=""
-                    rules={{ required: 'Debe seleccionar una Categoria' }}
-                    render={({ field }) => (
-                      <div>
-                        <Select
-                          {...field}
-                          variant="outlined"
-                          error={!!errors.Categoria}
-
-                          fullWidth
-                          sx={{ backgroundColor: '#eae9e8', color: '#101010' }}
-                          labelId="demo-simple-select-helper-label"
-                          id="demo-simple-select-helper"
-                          label="Escojer una categoria"
-                        >
-                          {options.map((option) => (
-                            <MenuItem key={option.id} value={option.categoriaNombre}>
-                              {option.categoriaNombre}
-                            </MenuItem>
-                          ))}
-                        </Select>
-                        {errors.Categoria && (
-                          <Typography variant="body2" color="error">
-                            {errors.Categoria.message}
-                          </Typography>
-                        )}
-                      </div>
-                    )}
-                  />
-                </FormControl>
-
-              </Grid>
-              <Grid item xs={12}>
-                <Controller
-                  name="descripcion"
-                  control={control}
-                  defaultValue=""
-                  rules={{ required: 'La descripcion es requerida' }}
-                  render={({ field }) => (
-                    <div>
-                      <TextField
-                        {...field}
-                        error={!!errors.descripcion}
-                        sx={{ backgroundColor: '#eae9e8', color: '#101010' }}
-                        variant="filled"
-                        fullWidth
-                        label="Descripción"
-                        id="descripcion"
-                        multiline rows={5}
-                      />
-                      {errors.descripcion && (
-                        <Typography variant="body2" color="error">
-                          {errors.descripcion.message}
-                        </Typography>
-                      )}
-                    </div>
-                  )}
-                />
-
-
-              </Grid>
-              <Grid item xs={12}>
-                <Controller
-                  name="codigoSeguridad"
-                  control={control}
-                  defaultValue=""
-                  rules={{ required: 'Codigo de seguridad es requerido' }}
-                  render={({ field }) => (
-                    <div>
-                      <TextField
-                        {...field}
-                        sx={{ backgroundColor: '#eae9e8', color: '#101010' }}
-                        variant="filled"
-
-                        error={!!errors.codigoSeguridad}
-                        fullWidth
-                        label="codigo de seguridad"
-                        id="codigoSeguridad"
-                      />
-                      {errors.codigoSeguridad && (
-                        <Typography variant="body2" color="error">
-                          {errors.codigoSeguridad.message}
-                        </Typography>
-                      )}
-                    </div>
-                  )}
-                />
-              </Grid>
-              <Grid item xs={12} direction="row" sx={{ display: 'flex', justifyContent: 'space-between' }} >
-
-                <ButtonGroup variant="contained" size="large" aria-label="small button group"
-                  sx={{
-                    '& > *': {
-                      marginRight: '16px', // Adjust the default margin between buttons
-                    },
-                    '& > *:nth-child(2)': {
-                      marginLeft: '32px', // Adjust the left margin for the second button
-                    },
-                    '@media (max-width:960px)': {
-                      width: '100%',
-                      display: 'flex',
-                      justifyContent: 'space-between',
-
-                      '& > *': {
-                        marginRight: '0px', // Adjust the default margin between buttons
-                      },
-                      '& > *:nth-child(2)': {
-                        marginLeft: '0px', // Adjust the left margin for the second button
-                      },
-                    }
-                  }}
-                >
-
-                  <Button sx={{ width: 150 }} color="primary" type="submit">Guardar</Button>
-                  <Button onClick={resetForm} sx={{ width: 150 }} color="secondary">Limpiar</Button>
-
-                </ButtonGroup>
-                <CategoriaButton onClick={iraCategoria}  sx={{ width: 200 }} variant="contained" size="large" >Nueva Categoria</CategoriaButton>
-              </Grid>
-            </Grid >
-          </form>
-        </Container>
-      </Box>
-
-    </ThemeProvider>
-  )
-}
-
-export default FormularioVideos
+export default FormularioVideos;

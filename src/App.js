@@ -8,7 +8,7 @@ import Footer from './componentes/Footer'
 import MainSection from './componentes/MainSection';
 import React, { useState, useEffect , useReducer } from 'react';
 import axios from 'axios';
-import { createBrowserRouter,  Route,  createRoutesFromElements, RouterProvider  } from 'react-router-dom';
+import { createBrowserRouter, Route, createRoutesFromElements, RouterProvider } from 'react-router-dom';
 import MyContext from '../src/Context'
 import VideoPlayer from './componentes/HomeCarrusel/VideoCard/VideoPlayer';
 import  FormularioCategoria from './componentes/FormularioCategoria'

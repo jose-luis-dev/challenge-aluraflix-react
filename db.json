@@ -62,28 +62,62 @@
       "codigoSeguridad": "12345678",
       "linkImagenVideo": "https://res.cloudinary.com/dvxcdxqpk/image/upload/v1693782517/fngah8byv7f1uslujmvs.webp",
       "id": 16
+    },
+    {
+      "id": "d181f188-6103-40e7-a909-a001e7c46630",
+      "titulo": "Prueba video",
+      "linkVideo": "https://youtu.be/sca4VG9b0NY?si=igyWCilkqjIKsOuJ",
+      "categoria": "Resident Evil Game",
+      "descripcion": "Prueba",
+      "codigoSeguridad": "12345678",
+      "linkImagenVideo": "https://ca-times.brightspotcdn.com/dims4/default/796e6c9/2147483647/strip/true/crop/1970x1108+39+0/resize/1200x675!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F12%2Fa5%2F79e097ccf62312d18a025f22ce48%2Fhoyla-recuento-11-cosas-aman-gatos-top-001"
+    },
+    {
+      "id": "944b301f-b966-4be1-934d-cfe324e23433",
+      "titulo": "Prueba video",
+      "linkVideo": "https://youtu.be/sca4VG9b0NY?si=igyWCilkqjIKsOuJ",
+      "categoria": "Resident Evil Game",
+      "descripcion": "Prueba",
+      "codigoSeguridad": "12345678",
+      "linkImagenVideo": "https://ca-times.brightspotcdn.com/dims4/default/796e6c9/2147483647/strip/true/crop/1970x1108+39+0/resize/1200x675!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F12%2Fa5%2F79e097ccf62312d18a025f22ce48%2Fhoyla-recuento-11-cosas-aman-gatos-top-001"
+    },
+    {
+      "id": "e2123270-3e38-4cdb-b650-7d8fd73cb6e4",
+      "titulo": "Prueba video2",
+      "linkVideo": "https://youtu.be/sca4VG9b0NY?si=igyWCilkqjIKsOuJ",
+      "categoria": "Resident Evil Game",
+      "descripcion": "Prueba11",
+      "codigoSeguridad": "12345678",
+      "linkImagenVideo": "https://ca-times.brightspotcdn.com/dims4/default/796e6c9/2147483647/strip/true/crop/1970x1108+39+0/resize/1200x675!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F12%2Fa5%2F79e097ccf62312d18a025f22ce48%2Fhoyla-recuento-11-cosas-aman-gatos-top-001"
+    },
+    {
+      "id": "ad572468-5c15-491a-995d-3d7e82c2c953",
+      "titulo": "Prueba video2",
+      "linkVideo": "https://youtu.be/sca4VG9b0NY?si=igyWCilkqjIKsOuJ",
+      "categoria": "Resident Evil Game",
+      "descripcion": "Prueba11",
+      "codigoSeguridad": "12345678",
+      "linkImagenVideo": "https://ca-times.brightspotcdn.com/dims4/default/796e6c9/2147483647/strip/true/crop/1970x1108+39+0/resize/1200x675!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F12%2Fa5%2F79e097ccf62312d18a025f22ce48%2Fhoyla-recuento-11-cosas-aman-gatos-top-001"
     }
   ],
   "categorias": [
     {
-      "id": 1,
-      "categoriaNombre": "Resident Evil Games",
-      "categoriaTexto": "Juegos principales de la serie",
-      "categoriaColor": "#E01E15"
-    },
-    {
-      "categoriaNombre": "Survival Horror",
-      "categoriaTexto": "Encuentros con enemigos",
-      "categoriaColor": "#2E8BD6",
-      "codigoSeguridad": "12345678",
-      "id": 2
-    },
-    {
+      "id": "dc6e87d1-1a18-4166-91ca-a2f3fda0f29b",
       "categoriaNombre": "Cultura Pop de Resident Evil",
       "categoriaTexto": "Cosplay y arte de los fans",
-      "categoriaColor": "#41C134",
-      "codigoSeguridad": "12345678",
-      "id": 3
+      "categoriaColor": "#41c154"
+    },
+    {
+      "id": "4f12531b-dd9d-4770-9bd8-a89d763276ee",
+      "categoriaNombre": "Survival Horror",
+      "categoriaTexto": "Encuentros con enemigos",
+      "categoriaColor": "#c814b3"
+    },
+    {
+      "id": "63980f33-0b60-43c1-b168-a4b6477a0782",
+      "categoriaNombre": "Resident Evil Games",
+      "categoriaTexto": "Juegos principales de la serie",
+      "categoriaColor": "#752de1"
     }
   ]
 }
