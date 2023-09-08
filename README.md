@@ -7,7 +7,7 @@ agregados por medio de link de youtube, adicional se puede agregar las categoria
     https://challenge-aluraflix-react.vercel.app/
 
 ## Imagenes del contenido
-- ![Texto alternativo](ruta/a/tu/imagen.jpg)
+- ![Página Principal](fotos/Foto1.PNG)
 
 
 ## Uso
@@ -15,7 +15,8 @@ agregados por medio de link de youtube, adicional se puede agregar las categoria
 En la página principal contamos con todos los videos agregados, contamos un carrusel el cual nos muestra todos los videos agregados, la funcionalidad de cada video es en seleccionar el
 video y en automatico enviara un reproductor para reproducir el video. 
 
-- ![Texto alternativo](ruta/a/tu/imagen.jpg)
+## Imagenes del contenido
+- ![Contenido Principal](fotos/Foto2.PNG)
 
 
 ## Características
@@ -28,8 +29,8 @@ video y en automatico enviara un reproductor para reproducir el video.
 6. Cada campo sera obligatorio, se agrega la opcion de categoria para indicar donde quedara el video.
 7. en caso de agregar una nueva categoria en el formulario del video contamos con un boton para ir un formulario para crear una nueva categoria.
 8. La página se adapta a diferentes dispositivos, laptop, tablet y smartphone.
-
-- ![Texto alternativo](ruta/a/tu/imagen.jpg)
-- ![Texto alternativo](ruta/a/tu/imagen.jpg)
-- ![Texto alternativo](ruta/a/tu/imagen.jpg)
+## Imagenes del contenido
+- ![Agregar video](fotos/Foto3.PNG)
+- ![Agregar categoria](fotos/Foto4.PNG)
+- ![Ver video](fotos/Foto5.PNG)
 
